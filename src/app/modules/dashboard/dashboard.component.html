@@ -1,1 +1,14 @@
-<p>dashboard works!</p>
+<div fxLayout="column" *ngIf="data">
+  <div fxFlexOffset="5" fxLayout="row" fxLayoutAlign="center center" *ngFor="let joke of data">
+    <mat-card fxLayout="column" >
+      <h4>
+        {{joke.title}}
+      </h4>
+      <span>{{joke.description}}</span>
+      <div>
+        <img width="400" src="{{joke.imgUrl}}" alt="random-photo">
+      </div>
+    </mat-card>
+  </div>
+
+</div>
